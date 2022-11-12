@@ -7,6 +7,18 @@ import 'movie_page.dart';
 var movieList = [
   Movie(name: 'Black Panther', imageUrl: 'black.jpg'),
   Movie(name: 'OMG รักจังวะ..ผิดจังหวะ', imageUrl: 'love.jpg'),
+  Movie(name: 'Doraemon The Movie 2021', imageUrl: 'doremon.jpg'),
+  Movie(name: 'Faces of Anne', imageUrl: 'ann.jpg'),
+  Movie(name: 'Black Adam', imageUrl: 'adum.jpg'),
+  Movie(name: 'Triangle of Sadness', imageUrl: 'yod.jpg'),
+  Movie(name: 'Confession', imageUrl: 'murder.jpg'),
+  Movie(name: 'Strange World', imageUrl: 'Strange World.jpg'),
+  Movie(name: 'Project Wolf Hunting', imageUrl: 'Project Wolf Hunting.jpg'),
+  Movie(name: 'Nocebo', imageUrl: 'Nocebo.jpg'),
+  Movie(name: 'Uunchai', imageUrl: 'Uunchai.jpg'),
+  Movie(name: 'The Menu', imageUrl: 'The Menu.jpg'),
+  Movie(name: 'Sick of Myself', imageUrl: 'Sick of Myself.jpg'),
+  Movie(name: 'Speak No Evil', imageUrl: 'Speak No Evil.jpg'),
 ];
 
 class HomePage extends StatefulWidget {
@@ -51,8 +63,10 @@ class _HomePageState extends State<HomePage> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Text(movie.name),
-                                  Text('${movie.seats} ที่นั่ง'),
+                                  Text(movie.name,
+                                    style: GoogleFonts.playfairDisplaySc(fontSize: 18.0,
+                                        color: Color(0xFF1C1C1C)),),
+                                  //Text('${movie.seats} ที่นั่ง'),
                                 ],
                               ),
                             ),//ถ้าใส่ Expanded 2 อันจะยืดแบบแบ่งคนละครึ่ง
@@ -61,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                                 context,
                                 MaterialPageRoute(builder: (context) => MoviePage(movie: movie)),
                               );
-                            }, child: Text('ซื้อตั๋ว'),
+                            }, child: Text('จองตั๋ว'),
                               style: OutlinedButton.styleFrom(
                                 //ปุ่ม
                                   backgroundColor: Colors.red.shade600),
